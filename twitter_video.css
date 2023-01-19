@@ -1,0 +1,57 @@
+/* = #video_wrap
+--------------------------------------------------- */
+#video_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  z-index: 99999999;
+}
+#video_wrap .player {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#video_wrap .player:before {
+  display: block;
+  content: " ";
+  background: url(../js/photoswipe/default-skin.svg);
+  background-position: 0 -44px;
+  background-size: 264px 88px;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#video_wrap .player iframe {
+  position: absolute;
+  width: 94%;
+  max-width: 550px;
+  max-height: 80%;
+  height: auto;
+  border-radius: 12px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: transparent;
+  transition: 0.5s;
+}
+#video_wrap .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1;
+}
